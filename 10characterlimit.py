@@ -8,14 +8,14 @@
 f = open("input.txt", "r+")
 f2 = open("output.txt", "r+") 
 
-lines = f.read()
+lines = f.read().splitlines()
 
 
 for currentLine in lines: 
 	if len(currentLine) < 10:
-		f2.write(currentLine)
+		f2.write(currentLine + "\n")
 	else: 
-		f2.write(currentLine [0:10])
+		f2.write(currentLine [0:10] + "\n")
 		#Add \n
 		#f.read().splitlines()
 
